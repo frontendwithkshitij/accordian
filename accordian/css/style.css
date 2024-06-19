@@ -1,9 +1,11 @@
 body {
-    background: #666600;
     background: -webkit-linear-gradient(to right, #999966, #666600);
     background: linear-gradient(to right, #999966, #666600);
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .accordian-heading {
@@ -20,23 +22,22 @@ body {
     flex-direction: column;
     align-items: center;
     background: white;
-    width: 500px;
+    width: 30%;
     padding: 30px;
 }
 
-.accordin {
+.accordion {
     display: flex;
     justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid #e3dede;
-    ;
 }
 
-.accordin h2 {
+.accordion h2 {
     color: #707014;
 }
 
-.accordin button {
+.accordion button {
     border-radius: 100%;
     width: 40px;
     height: 40px;
@@ -68,4 +69,14 @@ body {
 .accordian-container {
     display: flex;
     justify-content: space-around;
+}
+
+@media(max-width:768px) {
+    body {
+        background: #666600;
+    }
+
+    .container {
+        width: 80%;
+    }
 }
