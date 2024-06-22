@@ -3,7 +3,7 @@
 const  accordian = document.querySelectorAll(".accordion");
 let chevronIcon = document.querySelectorAll('.fa-chevron-right');
 accordian.forEach((element)=>{
-  element.addEventListener('click',function(){
+  element.addEventListener('click',function(element){
     this.classList.toggle('active')
 chevronIcon.forEach((element) => {
         if (element.parentElement && element.parentElement.parentElement && element.parentElement.parentElement.classList.contains('active')) {
@@ -13,10 +13,13 @@ chevronIcon.forEach((element) => {
         }
       });
     let panel = this.nextElementSibling;
-    if(panel.style.maxHeight){
+   if(panel){
+     if(panel.style.maxHeight){
       panel.style.maxHeight = null
     }else{
       panel.style.maxHeight = panel.scrollHeight  + "px"
     }
+   }
   })
 })
+
